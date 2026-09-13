@@ -1,5 +1,5 @@
 /**
- * Lean gesture \u2192 camera / mines_* router.
+ * Lean gesture → camera / mines_* router.
  * HUD mode: Reveal | Flag | Question (cycle). Tap-on-open-N always mines_chord.
  * No 2-finger flag. Pinch = zoom only. Drag = pan (clamped).
  */

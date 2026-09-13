@@ -30,7 +30,7 @@ Or: `make test` (if `make` is installed).
 
 Expected: `mines tests: N passed, 0 failed` covering Tester gates:
 1. zero-flood stops at numbers/flags
-2. chord no-op when \|F\|\u2260N
+2. chord no-op when \|F\|≠N
 3. chord lose on misflag
 4. chord into zero continues flood
 5. corner/edge neighbor counts &lt; 8
@@ -55,13 +55,13 @@ cd /workspace/repos/orx && ./setup.sh   # downloads extern, sets ORX, generates 
 
 ```bash
 export ORX=/workspace/repos/orx/code
-# Build Orx libs first (needs system deps: libgl1-mesa-dev, libxrandr-dev, \u2026)
+# Build Orx libs first (needs system deps: libgl1-mesa-dev, libxrandr-dev, …)
 cd "$ORX/build/linux/gmake" && make config=release64   # also debug64 / profile64
 
 cd /workspace/repos/minesweeper/build
 ./premake4 gmake
 cd linux/gmake && make config=release64
-# binary \u2192 ../../bin/minesweeper
+# binary → ../../bin/minesweeper
 ```
 
 ## Android build (not verified on this machine)
@@ -76,7 +76,7 @@ Prereqs: Android Studio / SDK / NDK r27+, `ORX` env set.
 
 ```bash
 cd /workspace/repos/orx/code/build/android && ./build.sh
-# AARs \u2192 orx/code/build/android/orx/build/outputs/aar
+# AARs → orx/code/build/android/orx/build/outputs/aar
 # Published for Gradle via $ORX/lib/static/android/repository/
 ```
 
@@ -86,7 +86,7 @@ cd /workspace/repos/orx/code/build/android && ./build.sh
 
 ```bash
 cd /workspace/repos/minesweeper/build/android && ./build.sh
-# APK \u2192 app/build/outputs/apk/
+# APK → app/build/outputs/apk/
 ```
 
 App id: `org.orx.minesweeper`, native module: `Minesweeper`.
@@ -102,4 +102,4 @@ Wiki refs:
 | Android (product) | HUD mode: Reveal / Flag / Question (bottom-right cycle) | Tap **revealed** N when flags==N | Portrait; pan clamped; pinch zoom; **no** 2-finger flag |
 | Desktop | TBD remap (was L reveal / R flag) | TBD (was L+R / L on open N) | Drag pan / wheel zoom; clamp required |
 
-Grid API never sees gestures \u2014 only `mines_reveal` / `mines_flag` / question / `mines_chord`. See [docs/STATUS.md](docs/STATUS.md).
+Grid API never sees gestures — only `mines_reveal` / `mines_flag` / question / `mines_chord`. See [docs/STATUS.md](docs/STATUS.md).

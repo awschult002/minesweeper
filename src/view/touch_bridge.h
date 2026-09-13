@@ -1,6 +1,6 @@
 /**
- * Maps multi-touch slots \u2192 gesture_touches (no Orx).
- * Orx shell feeds screen\u2192world points; all chords still go through mines_chord.
+ * Maps multi-touch slots → gesture_touches (no Orx).
+ * Orx shell feeds screen→world points; all chords still go through mines_chord.
  */
 #ifndef TOUCH_BRIDGE_H
 #define TOUCH_BRIDGE_H
@@ -17,7 +17,7 @@ typedef struct TouchBridge {
   uint32_t id0, id1;
   float x0, y0, x1, y1;
   int has0, has1;
-  int used; /* set on first begin \u2014 Tester wiring gate */
+  int used; /* set on first begin — Tester wiring gate */
 } TouchBridge;
 
 void touch_bridge_init(TouchBridge *t, GestureSM *gesture);

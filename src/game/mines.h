@@ -1,13 +1,13 @@
 /**
- * Pure Minesweeper grid \u2014 headless, no Orx / Android / camera / input.
+ * Pure Minesweeper grid — headless, no Orx / Android / camera / input.
  *
  * Contract:
- * - Moore neighborhood. N(v) = |adj \u2229 mines|.
+ * - Moore neighborhood. N(v) = |adj ∩ mines|.
  * - States: closed / open / flagged / question. Flagged never opens via Reveal.
  * - Question does NOT count toward chord N; chord may open a '?'.
- * - Reveal: no-op if open or flagged; '?' opens like closed; mine \u2192 lose;
+ * - Reveal: no-op if open or flagged; '?' opens like closed; mine → lose;
  *   N=0 flood (skip flagged only).
- * - Chord: open N\u22651; |adj \u2229 Flagged| == N \u2192 Reveal each non-flagged neighbor.
+ * - Chord: open N≥1; |adj ∩ Flagged| == N → Reveal each non-flagged neighbor.
  * - Win: all non-mines open. Lose: any mine opened.
  */
 #ifndef MINES_H
