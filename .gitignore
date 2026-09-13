@@ -1,0 +1,16 @@
+bin/
+*.o
+*.so
+*.apk
+*.log
+.cxx/
+build/android/app/build/
+build/android/.gradle/
+.gradle/
+local.properties
+*.iml
+.idea/
+.vscode/
+tests/test_mines
+tests/test_gesture
+*.exe
